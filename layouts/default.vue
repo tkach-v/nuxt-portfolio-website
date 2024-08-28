@@ -1,13 +1,20 @@
 <template>
   <div class="container mx-auto">
     <header class="flex justify-between items-center mt-5">
-      <div>
-        <NuxtLink
-          to="/"
-          class="text-xl font-semibold p-2 hover:bg-gray-200"
-        >Volodymyr Tkach</NuxtLink>
+      <div class="flex items-center space-x-12">
+        <div>
+          <NuxtLink
+            to="/"
+            class="text-xl font-semibold p-2 hover:bg-gray-200"
+          >
+            Volodymyr Tkach
+          </NuxtLink>
+        </div>
+        <Menu/>
       </div>
-      <Menu/>
+      <ClientOnly>
+        <ColorModeSelector/>
+      </ClientOnly>
     </header>
     <main class="p-2 mt-10">
       <slot/>
@@ -31,7 +38,8 @@ useHead({
 })
 </script>
 <style>
-  body {
-    font-family: 'Roboto', sans-serif;
-  }
+body {
+  font-family: 'Roboto', sans-serif;
+  @apply bg-white dark:bg-gray-900 text-gray-700 dark:text-gray-300;
+}
 </style>

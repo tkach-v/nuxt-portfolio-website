@@ -3,7 +3,7 @@
     v-if="status === 'error'"
     class="text-red-600 font-semibold"
   >Error happened</section>
-  <section v-else-if="status === 'loading'">Loading...</section>
+  <section v-else-if="status === 'pending'">Loading...</section>
   <section v-else>
     <ul class="grid grid-cols-1">
       <li
@@ -14,12 +14,13 @@
         <a
           :href="repository.html_url"
           target="_blank"
+          class="flex items-center justify-between text-sm"
         >
-          <div class="flex items-center justify-between text-sm">
+          <div>
             <div class="font-semibold">{{ repository.name }}</div>
-            <div>{{ repository.stargazers_count }} ★</div>
+            <p>{{ repository.description }}</p>
           </div>
-          <p class="text-sm">{{ repository.description }}</p>
+          <div>{{ repository.stargazers_count }} ★</div>
         </a>
       </li>
     </ul>
