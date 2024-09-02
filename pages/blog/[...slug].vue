@@ -1,7 +1,7 @@
 <template>
-  <div>
-    Post with id: {{route.params.id}}
-  </div>
+  <article class="prose dark:prose-invert">
+    <ContentDoc />
+  </article>
 </template>
 
 <script setup lang="ts">
