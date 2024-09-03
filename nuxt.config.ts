@@ -6,6 +6,14 @@ export default defineNuxtConfig({
     '@nuxtjs/color-mode',
     '@nuxt/content',
   ],
+  content: {
+    highlight: {
+      theme: {
+        default: 'github-light',
+        dark: 'github-dark',
+      },
+    },
+  },
   colorMode: {
     classSuffix: ''
   },

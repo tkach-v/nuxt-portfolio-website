@@ -33,8 +33,13 @@ useHead({
       rel: 'stylesheet',
       href: 'https://fonts.googleapis.com/css2?family=Roboto&display=swap',
       crossorigin: ''
+    },
+    {
+      rel: 'icon',
+      type: 'image/ico',
+      href: '/favicon.ico'
     }
-  ]
+  ],
 })
 </script>
 <style>
