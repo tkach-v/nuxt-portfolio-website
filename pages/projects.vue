@@ -1,12 +1,5 @@
 <template>
-  <div>
-    <h2 class="text-2xl font-semibold mb-10">My GitHub projects:</h2>
-    <ProjectsList/>
-  </div>
+  <article class="prose dark:prose-invert max-w-none">
+    <ContentDoc path="/projects" />
+  </article>
 </template>
-<script setup lang="ts">
-useHead({
-  title: 'Projects',
-  description: 'My Github projects',
-})
-</script>

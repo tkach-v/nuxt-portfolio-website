@@ -1,5 +1,6 @@
 ---
 title: "test title"
+publishedAt: 2024-09-09 00:00:00
 ---
 
 # First post on our website

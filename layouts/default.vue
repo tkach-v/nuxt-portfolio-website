@@ -23,6 +23,9 @@
 </template>
 <script setup lang="ts">
 useHead({
+  htmlAttrs: {
+    lang: 'en'
+  },
   titleTemplate: '%s - Volodymyr Tkach',
   link: [
     {
