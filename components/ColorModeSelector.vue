@@ -1,12 +1,19 @@
 <template>
   <div class="flex space-x-2 items-center">
-    <div class="text-gray-500 text-xs" v-if="showNextModelLabel">Change to {{ nextMode }}</div>
+    <div
+      v-if="showNextModelLabel"
+      class="text-gray-500 text-xs"
+    >
+      Change to {{ nextMode }}
+    </div>
     <button
+      class="hover:bg-gray-200 dark:hover:bg-gray-600 px-2 py-1 text-gray-500"
       @click="toggleMode"
       @mouseenter="showNextModelLabel = true"
       @mouseleave="showNextModelLabel = false"
-      class="hover:bg-gray-200 dark:hover:bg-gray-600 px-2 py-1 text-gray-500"
-    >{{ nextModeIcon }}</button>
+    >
+      {{ nextModeIcon }}
+    </button>
   </div>
 </template>
 
@@ -16,12 +23,12 @@ const colorMode = useColorMode()
 const modes = [
   'system',
   'light',
-  'dark'
+  'dark',
 ]
 const nextModeIcons = {
   system: '🌓',
   light: '🌕',
-  dark: '🌑'
+  dark: '🌑',
 }
 
 const nextMode = computed(() => {
@@ -29,12 +36,13 @@ const nextMode = computed(() => {
   let nextModeIndex = null
   if (currentModeIndex + 1 === modes.length) {
     nextModeIndex = 0
-  } else {
+  }
+  else {
     nextModeIndex = currentModeIndex + 1
   }
   return modes[nextModeIndex]
 })
 
-const nextModeIcon = computed(() => nextModeIcons[nextMode.value]);
-const toggleMode = () => colorMode.preference = nextMode.value;
+const nextModeIcon = computed(() => nextModeIcons[nextMode.value])
+const toggleMode = () => colorMode.preference = nextMode.value
 </script>

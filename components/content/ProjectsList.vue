@@ -3,8 +3,12 @@
     <section
       v-if="status === 'error'"
       class="text-red-600 font-semibold"
-    >Error happened</section>
-    <section v-else-if="status === 'pending'">Loading...</section>
+    >
+      Error happened
+    </section>
+    <section v-else-if="status === 'pending'">
+      Loading...
+    </section>
     <section v-else>
       <ul class="grid grid-cols-1">
         <li
@@ -28,13 +32,14 @@
     </section>
   </div>
 </template>
+
 <script setup lang="ts">
-import type {Repository} from "~/types";
+import type { Repository } from '~/types'
 
 const { data, status } = useFetch<Repository[]>('https://api.github.com/users/tkach-v/repos')
 
 const repos = computed(() => {
   if (!data.value) return []
-  return data.value.sort((a, b) => b.stargazers_count - a.stargazers_count)
+  return [...data.value].sort((a, b) => b.stargazers_count - a.stargazers_count)
 })
 </script>

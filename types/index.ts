@@ -1,2 +1,2 @@
-export * from "~/types/projects";
-export * from "~/types/blog";
+export * from '~/types/projects'
+export * from '~/types/blog'

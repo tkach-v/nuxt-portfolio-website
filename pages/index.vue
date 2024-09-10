@@ -1,10 +1,8 @@
 <template>
   <div>Hello from the main page!</div>
-  <Projects />
 </template>
-<script setup lang="ts">
-import Projects from "~/pages/projects.vue";
 
+<script setup lang="ts">
 useSeoMeta({
   title: 'Main Page',
   description: 'This is the main page',

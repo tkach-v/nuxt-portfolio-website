@@ -5,6 +5,7 @@ export default defineNuxtConfig({
     '@nuxtjs/tailwindcss',
     '@nuxtjs/color-mode',
     '@nuxt/content',
+    '@nuxt/eslint',
   ],
   content: {
     highlight: {
@@ -15,6 +16,6 @@ export default defineNuxtConfig({
     },
   },
   colorMode: {
-    classSuffix: ''
+    classSuffix: '',
   },
 })

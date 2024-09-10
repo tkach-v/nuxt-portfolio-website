@@ -22,11 +22,9 @@
     </ul>
   </nav>
 </template>
+
 <style scoped>
   .link {
     @apply p-1 hover:bg-gray-200;
   }
 </style>
-<script setup lang="ts">
-import Projects from "~/pages/projects.vue";
-</script>
