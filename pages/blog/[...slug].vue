@@ -6,12 +6,12 @@
       </template>
       <template #default="{ doc }">
         <div class="grid grid-cols-6 gap-16">
-          <div :class="{ 'col-span-4': doc.toc, 'col-span-6': !doc.toc }">
+          <div :class="{ 'col-span-6 md:col-span-4': doc.toc, 'col-span-6': !doc.toc }">
             <ContentRenderer :value="doc" />
           </div>
           <div
             v-if="doc.toc"
-            class="col-span-2 not-prose"
+            class="col-span-2 not-prose hidden md:block"
           >
             <aside class="sticky top-8">
               <div class="text-2xl font-semibold mb-2">
