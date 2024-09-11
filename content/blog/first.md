@@ -1,6 +1,7 @@
 ---
 title: "test title"
 publishedAt: 2024-09-09 00:00:00
+toc: true
 ---
 
 # First post on our website
