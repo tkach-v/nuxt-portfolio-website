@@ -33,7 +33,7 @@
 import type { Blog } from '~/types'
 
 type Props = {
-  limit: number | null
+  limit: string | null
 }
 
 const props = withDefaults(defineProps<Props>(), {

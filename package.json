@@ -16,6 +16,7 @@
     "@nuxt/image": "^1.8.0",
     "@nuxtjs/color-mode": "^3.4.4",
     "nuxt": "^3.13.0",
+    "sitemap": "^8.0.0",
     "vue": "latest"
   },
   "devDependencies": {

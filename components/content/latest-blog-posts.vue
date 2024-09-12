@@ -16,7 +16,7 @@
 
 <script setup lang="ts">
 type Props = {
-  limit: number | null
+  limit: string | null
 }
 
 withDefaults(defineProps<Props>(), {
